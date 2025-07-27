@@ -23,6 +23,18 @@
       font-size: 2rem;
       font-weight: bold;
     }
+    nav {
+      position: relative;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav li {
+      position: relative;
+    }
     nav a {
       margin: 0 1rem;
       text-decoration: none;
@@ -39,8 +51,28 @@
       height: 2px;
       background-color: black;
     }
+    nav li ul {
+      display: none;
+      position: absolute;
+      top: 2.5rem;
+      left: 0;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      z-index: 1000;
+    }
+    nav li:hover ul {
+      display: block;
+    }
+    nav li ul li {
+      width: 150px;
+      padding: 0.5rem;
+    }
+    nav li ul li a {
+      margin: 0;
+    }
     .banner {
-      background: url('https://images.unsplash.com/photo-1519999482648-25049ddd37b1') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1610535061340-c1fa90ed1e2b') center/cover no-repeat;
       height: 70vh;
       display: flex;
       align-items: center;
@@ -82,10 +114,26 @@
   <header>
     <div class="logo">UGFA</div>
     <nav>
-      <a href="#gifting">Gifting</a>
-      <a href="#accessories">Accessories</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li>
+          <a href="#gifting">Gifting</a>
+          <ul>
+            <li><a href="#gifting">Corporate Gifting</a></li>
+            <li><a href="#gifting">Festive Hampers</a></li>
+            <li><a href="#gifting">Custom Orders</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#accessories">Accessories</a>
+          <ul>
+            <li><a href="#accessories">Luggage</a></li>
+            <li><a href="#accessories">Vanity</a></li>
+            <li><a href="#accessories">Jackets</a></li>
+          </ul>
+        </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
